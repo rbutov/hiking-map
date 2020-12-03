@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/hiking-map/static/js/main.00eb5c92.chunk.js",
-    "main.js.map": "/hiking-map/static/js/main.00eb5c92.chunk.js.map",
+    "main.js": "/hiking-map/static/js/main.06b4fdb7.chunk.js",
+    "main.js.map": "/hiking-map/static/js/main.06b4fdb7.chunk.js.map",
     "runtime-main.js": "/hiking-map/static/js/runtime-main.ec7181af.js",
     "runtime-main.js.map": "/hiking-map/static/js/runtime-main.ec7181af.js.map",
-    "static/js/2.e20c33a3.chunk.js": "/hiking-map/static/js/2.e20c33a3.chunk.js",
-    "static/js/2.e20c33a3.chunk.js.map": "/hiking-map/static/js/2.e20c33a3.chunk.js.map",
+    "static/js/2.d2b51e49.chunk.js": "/hiking-map/static/js/2.d2b51e49.chunk.js",
+    "static/js/2.d2b51e49.chunk.js.map": "/hiking-map/static/js/2.d2b51e49.chunk.js.map",
     "index.html": "/hiking-map/index.html",
-    "static/js/2.e20c33a3.chunk.js.LICENSE.txt": "/hiking-map/static/js/2.e20c33a3.chunk.js.LICENSE.txt"
+    "static/js/2.d2b51e49.chunk.js.LICENSE.txt": "/hiking-map/static/js/2.d2b51e49.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.ec7181af.js",
-    "static/js/2.e20c33a3.chunk.js",
-    "static/js/main.00eb5c92.chunk.js"
+    "static/js/2.d2b51e49.chunk.js",
+    "static/js/main.06b4fdb7.chunk.js"
   ]
 }

@@ -68,7 +68,7 @@ const Map = props => {
    * @param {number} id: _trail id
    */
   const markerClick = id => {
-    history.push(`/trail/${id}`);
+    history.push(`${process.env.PUBLIC_URL}/?trail=${id}`);
   };
 
   /**

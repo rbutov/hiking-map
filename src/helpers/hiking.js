@@ -15,10 +15,18 @@ export const getDefaultSettings = () => {
  * @returns {null|number}: _hiking id
  */
 export const getTrailIdFromLocation = location => {
-  if (location.pathname.startsWith('/trail/')) {
-    return parseInt(location.pathname.replace('/trail/', ''));
-  }
-  return null;
+  const query = new URLSearchParams(location.search);
+  return query.has('trail') ? parseInt(query.get('trail')) : null;
+};
+
+/**
+ * _get query from ulr
+ * @param {object} location: _current url
+ * @returns {URLSearchParams}: _query params
+ */
+export const getQueryFromLocation = location => {
+  console.log(location);
+  return new URLSearchParams(location.search);
 };
 
 /**

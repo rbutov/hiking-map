@@ -11,7 +11,10 @@ const TrailItem = props => {
   const classes = useStyles();
 
   return (
-    <Link to={`/trail/${props.trail.id}`} className={classes.link}>
+    <Link
+      to={`${process.env.PUBLIC_URL}/?trail=${props.trail.id}`}
+      className={classes.link}
+    >
       <Card className={classes.root}>
         <CardMedia
           className={classes.cover}

@@ -1,5 +1,6 @@
 ## Hiking map
 ### _using hikingproject.com and MapBox
+[DEMO](https://rgbutov.github.io/hiking-map/)
 ### _setup
 _please add you own `REACT_APP_HIKING_API_KEY` and `REACT_APP_MAP_API_KEY` to `.env`<br />
 _then run `npm install`

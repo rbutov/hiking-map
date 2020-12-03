@@ -8,7 +8,7 @@ import {defaultZoom, home} from '../../shared/Map/config';
 import TrailView from '../../shared/TrailView';
 import TrailsList from '../../shared/TrailsList';
 import TrailsHistory from '../../shared/TrailsHistory';
-import {getTrailIdFromLocation, loadTrails} from '../../../helpers/hiking';
+import {getQueryFromLocation, getTrailIdFromLocation, loadTrails} from '../../../helpers/hiking';
 import {calculateDistance} from '../../../helpers/map';
 
 import dark from '../../../themes/dark';
@@ -44,6 +44,7 @@ const Home = () => {
   });
 
   const theme = settings.isDark ? dark : light;
+  const query = getQueryFromLocation(location);
 
   const [trailId, setTrailId] = useState(null);
   const [trail, setTrail] = useState(null);
@@ -136,7 +137,7 @@ const Home = () => {
    */
   const setOpenedTrail = (trail, saveHistory = false) => {
     setTrail(trail);
-    dispatch(addHistory(trail));
+    if (saveHistory) dispatch(addHistory(trail));
   };
 
   useEffect(() => {
@@ -185,18 +186,12 @@ const Home = () => {
               <div className={classes.trails}>
                 {isLoading ? (
                   <Loader />
+                ) : query.has('trail') ? (
+                  <TrailView trail={trail} />
+                ) : query.has('history') ? (
+                  <TrailsHistory />
                 ) : (
-                  <Switch>
-                    <Route path={'/trail/:id'}>
-                      <TrailView trail={trail} />
-                    </Route>
-                    <Route path={'/history'}>
-                      <TrailsHistory />
-                    </Route>
-                    <Route path={'/'}>
-                      <TrailsList />
-                    </Route>
-                  </Switch>
+                  <TrailsList />
                 )}
               </div>
             </Grid>

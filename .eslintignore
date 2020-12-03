@@ -1,0 +1,10 @@
+node_modules
+dist/
+coverage/
+.idea/
+.history/
+.firebase/
+*.md
+webpack.config.js
+package-lock.json
+package.json

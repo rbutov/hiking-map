@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.idea/
+.history/
+.firebase/
+*.md
+package-lock.json
+package.json
